@@ -1,0 +1,42 @@
+package com.example.questnavigastugas_057.view
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.questnavigastugas_057.R
+
+@Composable
+fun ListDaftar(navController: NavController) {
+    // Skema warna diubah menjadi nuansa abu-abu
+    val headerGrey = Color(0xFF424242) // Abu-abu gelap untuk header
+    val backgroundColor = Color(0xFFF5F5F5) // Abu-abu sangat terang untuk background
+    val cardBackgroundColor = Color.White
+    val buttonColor = Color(0xFF616161) // Abu-abu sedang untuk tombol
+    val labelGrey = Color(0xFF757575) // Abu-abu untuk teks label
+    val buttonTextColor = Color.White
