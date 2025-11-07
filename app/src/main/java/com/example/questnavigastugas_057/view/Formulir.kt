@@ -99,3 +99,58 @@ fun Formulir(navController: NavController) {
                     singleLine = true
                 )
 
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text(
+                    "JENIS KELAMIN",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray
+                )
+                Column {
+                    jenisKelaminOptions.forEach { option ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                        ) {
+                            RadioButton(
+                                selected = (jenisKelamin == option),
+                                onClick = { jenisKelamin = option },
+                                colors = RadioButtonDefaults.colors(selectedColor = primaryGrey) // Menggunakan primaryGrey
+                            )
+                            Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text(
+                    "STATUS PERKAWINAN",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray
+                )
+                Column {
+                    statusPerkawinanOptions.forEach { option ->
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                        ) {
+                            RadioButton(
+                                selected = (statusPerkawinan == option),
+                                onClick = { statusPerkawinan = option },
+                                colors = RadioButtonDefaults.colors(selectedColor = primaryGrey) // Menggunakan primaryGrey
+                            )
+                            Text(text = option, modifier = Modifier.padding(start = 8.dp))
+                        }
+                    }
+                }
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text(
+                    "ALAMAT",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                )
