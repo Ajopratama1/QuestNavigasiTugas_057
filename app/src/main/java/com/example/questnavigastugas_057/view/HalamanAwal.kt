@@ -52,4 +52,9 @@ fun HalamanAwal(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-           
+            Image(
+
+                painter = painterResource(id = R.drawable.new_foto),
+                contentDescription = "Logo Aplikasi",
+                modifier = Modifier.size(280.dp)
+            )
