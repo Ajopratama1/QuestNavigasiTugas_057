@@ -17,3 +17,23 @@ object Routes {
     const val LIST_DAFTAR = "ListDaftar"
     const val FORMULIR = "Formulir"
 }
+
+@Composable
+fun AppNavigation(modifier: Modifier, name: String) {
+    val navController = rememberNavController()
+
+    NavHost(
+        navController = navController,
+        startDestination = Routes.HALAMAN_AWAL
+    ) {
+        composable(Routes.HALAMAN_AWAL) {
+            HalamanAwal(navController = navController)
+        }
+        composable(Routes.LIST_DAFTAR) {
+            ListDaftar(navController = navController)
+        }
+        composable(Routes.FORMULIR) {
+            Formulir(navController = navController)
+        }
+    }
+}
