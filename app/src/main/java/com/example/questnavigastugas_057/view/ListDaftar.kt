@@ -145,3 +145,23 @@ fun InfoCard(label: String, value: String, backgroundColor: Color, labelColor: C
         }
     }
 }
+
+@Composable
+fun CustomButton(text: String, color: Color, textColor: Color, onClick: () -> Unit) {
+    Button(
+        onClick = onClick,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(50.dp),
+        shape = RoundedCornerShape(8.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = color)
+    ) {
+        Text(text = text, fontSize = 16.sp, color = textColor)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ListDaftarPreview() {
+    com.example.questnavigastugas_057.view.ListDaftar(navController = rememberNavController())
+}
