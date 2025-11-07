@@ -58,3 +58,13 @@ fun HalamanAwal(navController: NavController) {
                 contentDescription = "Logo Aplikasi",
                 modifier = Modifier.size(280.dp)
             )
+            Text(
+                text = "Ahmad Ajo Pratama\n20230140057",
+                fontSize = 23.sp,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Monospace,
+                textAlign = TextAlign.Center,
+                lineHeight = 24.sp
+            )
+        }
+    }
