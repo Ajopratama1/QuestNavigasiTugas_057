@@ -154,3 +154,46 @@ fun Formulir(navController: NavController) {
                     color = Color.Gray,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )
+                OutlinedTextField(
+                    value = alamat,
+                    onValueChange = { alamat = it },
+                    label = { Text("Alamat") },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(8.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = primaryGrey, // Menggunakan primaryGrey
+                        unfocusedBorderColor = Color.Black,
+                    ),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Done
+                    ),
+                    singleLine = true
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+
+                Button(
+                    onClick = {
+                        navController.navigate(Routes.LIST_DAFTAR) {
+                            popUpTo(Routes.HALAMAN_AWAL)
+                        }
+                    },
+                    modifier = Modifier.fillMaxWidth().height(50.dp),
+                    shape = RoundedCornerShape(30.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = primaryGrey), // Menggunakan primaryGrey
+                ) {
+                    Text(
+                        stringResource(R.string.submit),
+                        color = Color.White,
+                        fontSize = 18.sp
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun FormulirBaruPreview() {
+    com.example.questnavigastugas_057.view.Formulir(navController = rememberNavController())
+}
