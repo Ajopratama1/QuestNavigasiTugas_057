@@ -40,3 +40,26 @@ fun ListDaftar(navController: NavController) {
     val buttonColor = Color(0xFF616161) // Abu-abu sedang untuk tombol
     val labelGrey = Color(0xFF757575) // Abu-abu untuk teks label
     val buttonTextColor = Color.White
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(top = 53.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(headerGrey)
+                .heightIn(min = 100.dp)
+                .padding(16.dp),
+            contentAlignment = Alignment.BottomStart
+        ) {
+            Text(
+                text = "List Daftar Member Gym",
+                fontSize = 30.sp,
+                color = Color.White,
+                modifier = Modifier.padding(start = 10.dp)
+            )
+        }
+
