@@ -63,3 +63,55 @@ fun ListDaftar(navController: NavController) {
             )
         }
 
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.nama_lengkap),
+                value = "KEVIN LEVRONE",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelGrey // Menggunakan warna label abu-abu
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.jenis_kelamin),
+                value = "Laki-laki",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelGrey // Menggunakan warna label abu-abu
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = "STATUS PERKAWINAN",
+                value = "Lajang",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelGrey // Menggunakan warna label abu-abu
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            InfoCard(
+                label = stringResource(id = R.string.alamat),
+                value = "CANADA",
+                backgroundColor = cardBackgroundColor,
+                labelColor = labelGrey // Menggunakan warna label abu-abu
+            )
+            Spacer(modifier = Modifier.height(40.dp))
+
+            CustomButton(text = "Beranda", color = buttonColor, textColor = buttonTextColor) {
+                navController.navigate("HalamanAwal")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+            CustomButton(text = "Formulir Pendaftaran", color = buttonColor, textColor = buttonTextColor) {
+                navController.navigate("Formulir")
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+    }
+}
