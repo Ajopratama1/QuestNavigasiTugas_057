@@ -39,3 +39,17 @@ fun HalamanAwal(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround
     ){
+        Spacer(modifier = Modifier.height(30.dp))
+        Text(
+            text = "Welcome to the Jungle",
+            fontSize = 42.sp,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily.Monospace,
+            color = textColor,
+            style = TextStyle(lineHeight = 56.sp)
+        )
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+           
