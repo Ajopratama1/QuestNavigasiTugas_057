@@ -67,4 +67,25 @@ fun HalamanAwal(navController: NavController) {
                 lineHeight = 24.sp
             )
         }
+        Button(
+            onClick = {
+
+                navController.navigate(Routes.LIST_DAFTAR)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            shape = RoundedCornerShape(25.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = buttonColor)
+        ){
+            Text(text = "Submit", fontSize = 18.sp, color = Color.White)
+        }
+        Spacer(modifier = Modifier.height(50.dp))
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun HalamanAwalPreview() {
+    com.example.questnavigastugas_057.view.HalamanAwal(navController = rememberNavController())
+}
